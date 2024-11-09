@@ -3,7 +3,7 @@ const signup = require("../controllers/signupController")
 
 const router = express.Router();
 
-router.get("/auth/github", signup.signupRedirect)
-// router.get("/auth/github", signup.signupCallback)
+router.get("/github", signup.signupRedirect)
+router.get("/github/callback", signup.signupCallback)
 
 module.exports = router;

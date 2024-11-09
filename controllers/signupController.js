@@ -7,6 +7,7 @@ exports.signupRedirect = (req, res) => {
 
 exports.signupCallback = async (req, res) => {
     const { code } = req.query;
+    console.log(code);
     try {
         const tokenResponse = await axios.post(
             "https://github.com/login/oauth/access_token", {
